@@ -1,0 +1,44 @@
+[
+  {
+    "ContainingType": "SistemaBecasWeb.Controllers.ApiBecasController",
+    "Method": "ObtenerTodas",
+    "RelativePath": "api/becas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaBecasWeb.Controllers.ApiBecasController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/becas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaBecasWeb.Controllers.ApiBecasController",
+    "Method": "Evaluar",
+    "RelativePath": "api/becas/evaluar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SistemaBecasWeb.Controllers.EvaluacionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

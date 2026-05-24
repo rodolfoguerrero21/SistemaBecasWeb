@@ -1,0 +1,28 @@
+﻿@model SistemaBecasWeb.Models.SolicitudBeca
+@{
+    ViewData["Title"] = "Eliminar Solicitud";
+}
+
+<div class="container mt-4">
+    <h2>⚠️ Confirmar Eliminación</h2>
+    <hr />
+
+    <div class="alert alert-danger">
+        ¿Está seguro que desea eliminar la solicitud de <strong>@Model.NombreEstudiante</strong>?
+    </div>
+
+    <dl class="row">
+        <dt class="col-sm-3">RUT</dt>
+        <dd class="col-sm-9">@Model.Rut</dd>
+        <dt class="col-sm-3">Carrera</dt>
+        <dd class="col-sm-9">@Model.Carrera</dd>
+        <dt class="col-sm-3">Estado</dt>
+        <dd class="col-sm-9">@Model.EstadoSolicitud</dd>
+    </dl>
+
+    <form asp-action="EliminarConfirmado" asp-route-id="@Model.IdSolicitud" method="post">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">🗑️ Sí, Eliminar</button>
+        <a asp-action="Index" class="btn btn-secondary">← Cancelar</a>
+    </form>
+</div>
